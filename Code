@@ -1,0 +1,173 @@
+import math
+
+ListErratic = ["Appletun","Applin","Flapple","Feebas","Milotic","Nincada","Ninjask","Shedinja"]
+ListFast = ["Boltund","Clefable","Clefairy","Cleffa","Cinccino","Corsola","Cursola","Delibird","Duskull","Dusclops","Dusknoir","Indeedee","Lunatone","Mawile","Minccino","Munna","Musharna","Nickit","Pyukumuku","Solrock","Theivul","Togekiss","Togepi","Togetic","Wishiwashi","Yamper"]
+ListMFast = ["Accelgor","Aegislash","Alcremie","Araquanid","Avalugg","Baltoy","Barbaracle","Barboach","Basculin","Beartic","Beheeyem","Bergmite","Bewear","Binacle","Bisharp","Blipbug","Blitzle","Bonsly","Bronzong","Bronzor","Bunnelby","Butterfree","Caterpie","Centiskorch","Charjabug","Cherrim","Cherubi","Chewtle","Claydol","Cofagrigus","Copperajah","Cottonee","Cramorant","Crustle","Cubchoo","Cufant","Cutiefly","Dewpider","Dhelmise","Diggersby","Diglett","Ditto","Dottler","Doublade","Drampa","Drednaw","Drilbur","Dubwool","Dugtrio","Duraludon","Durant","Dwebble","Eevee","Eldegoss","Elgyem","Escavalier","Espeon","Espurr","Excadrill","Falinks","Farfetch'd","Ferroseed","Ferrothorn","Flareon","Frillish","Froslass","Frosmoth","Galvantula","Garbodor","Gastrodon","Glaceon","Glalie","Golett","Golisopod","Golurk","Gossifleur","Gourgeist","Greedent","Grimmsnarl","Grubbin","Hawlucha","Heatmor","Helioptile","Heliolisk","Hitmonchan","Hitmonlee","Hitmontop","Honedge","Hoothoot","Impidimp","Inkay","Jellicent","Jolteon","Joltik","Karrablast","Kingler","Koffing","Krabby","Leafeon","Liepard","Linoone","Malamar","Maractus","Mareanie","Meowstic","Meowth","Metapod","Milcery","Mime Jr.","Mimikyu","Morelull","Morgrem","Morpeko","Mr. Mime","Mr. Rime","Mudbray","Mudsdale","Natu","Ninetales","Noctowl","Noibat","Noivern","Obstagoon","Octillery","Onix","Orbeetle","Pancham","Pangoro","Pawniard","Pelipper","Perrserker","Persian","Phantump","Pichu","Pikachu","Pincurchin","Polteageist","Ponyta","Pumpkaboo","Purrloin","Quagsire","Qwilfish","Raichu","Rapidash","Remoraid","Rotom","Runerigus","Salandit","Salazzle","Sandaconda","Sawk","Scrafty","Scraggy","Seaking","Shellos","Shelmet","Shiinotic","Sigilyph","Silicobra","Sinistea","Sirfetch'd","Sizzlipede","Skuntank","Skwovet","Slurpuff","Snom","Snorunt","Spritzee","Steelix","Stufful","Stunfisk","Stunky","Sudowoodo","Swirlix","Swoobat","Sylveon","Throh","Togedemaru","Torkoal","Toxapex","Toxicroak","Trevenant","Trubbish","Turtonator","Tyrogue","Umbreon","Vaporeon","Vikavolt","Vulpix","Weezing","Whimsicott","Whiscash","Wimpod","Wingull","Wobbuffet","Woobat","Wooloo","Wooper","Wynaut","Xatu","Yamask","Zigzagoon"]
+ListMSlow = ["Bellossom","Boldore","Bounsweet","Budew","Carkol","Charizard","Charmander","Charmeleon","Cinderace","Clobbopus","Coalossal","Combee","Conkeldurr","Corviknight","Corvisquire","Darmanitan","Darumaka","Drizzile","Duosion","Flygon","Gastly","Gengar","Gigalith","Gloom","Gothita","Gothorita","Gothitelle","Grapploct","Grookey","Gurdurr","Haunter","Inteleon","Klang","Klink","Klinklang","Lampent","Litwick","Lombre","Lotad","Lucario","Ludicolo","Machamp","Machoke","Machop","Mew","Nuzleaf","Oddish","Palpitoad","Raboot","Reuniclus","Rillaboom","Riolu","Roggenrola","Rolycoly","Rookidee","Roselia","Roserade","Sableye","Scorbunny","Seedot","Seismitoad","Shiftry","Shuckle","Sobble","Solosis","Steenee","Thwackey","Timburr","Toxel","Toxtricity","Tranquill","Pidove","Trapinch","Tympole","Unfezant","Vespiquen","Vibrava","Vileplume"]
+ListSlow = ["Abomasnow","Arcanine","Arctovish","Arctozolt","Arrokuda","Axew","Barraskewda","Braviary","Chinchou","Cloyster","Deino","Dracovish","Dracozolt","Dragapult","Drakloak","Drapion","Dreepy","Eiscue","Electrike","Eternatus","Fraxure","Gallade","Gardevoir","Goodra","Goomy","Growlithe","Gyarados","Hakamo-o","Hatenna","Hatterene","Hattrem","Haxorus","Hippopotas","Hippowdon","Hydreigon","Jangmo-o","Kirlia","Kommo-o","Lanturn","Lapras","Larvitar","Magikarp","Mamoswine","Mandibuzz","Manectric","Mantine","Mantyke","Melmetal","Meltan","Munchlax","Oranguru","Passimian","Piloswine","Pupitar","Ralts","Rhydon","Rhyhorn","Rhyperior","Rufflet","Shellder","Silvally","Skorupi","Snorlax","Snover","Stonjourner","Swinub","Type: Null","Tyranitar","Vanillish","Vanillite","Vanilluxe","Vullaby","Zacian","Zamazenta","Zweilous"]
+ListFluct = ["Corphish","Crawdaunt","Drifblim","Drifloon","Wailmer","Wailord"]
+
+
+
+pkmn = input("Which Pokemon are you leveling up?")
+
+if pkmn in ListErratic:
+    n = int(input("Which level do you want to grow your Pokemon tPo from hatch?"))
+    if n >= 2 and n <= 50:
+        exp = (1/50)*pow(n,3)*(100-n)
+    elif n > 50 and n <= 68:
+        exp = (1/100)*pow(n,3)*(150-n)
+    elif n > 68 and n <= 98:
+        exp = (1/1500)*pow(n,3)*(1911-10*n)
+    elif n > 98 and n <= 100:
+        exp = (1/100)*pow(n,3)*(160-n)
+    else:
+        print("Pokemon can't level up past level 100!")
+    exp = math.floor(exp)
+    print("Total experience needed: " + str(exp))
+    candyxs = math.ceil(exp/100)
+    print("XS candies needed: " + str(candyxs))
+    
+    candys = math.ceil(exp/800)
+    print("S candies needed: " + str(candys))
+    
+    candym = math.ceil(exp/3000)
+    print("M candies needed: " + str(candym))
+    
+    candyl = math.ceil(exp/10000)
+    print("L candies needed: " + str(candyl))
+    
+    candyxl = math.ceil(exp/30000)
+    print("XL candies needed: " + str(candyxl))
+    
+    
+
+elif pkmn in ListFast:
+
+    n = int(input("How many levels do you wish to grow your Pokemon from hatch?"))
+    if n >= 2 and n <= 100:
+        exp = 0.8*pow(n,3)
+    else:
+        print("Pokemon can't level up past level 100!")        
+    exp = math.floor(exp)
+    print("Total experience needed: " + str(exp))
+    candyxs = math.ceil(exp/100)
+    print("XS candies needed: " + str(candyxs))
+    
+    candys = math.ceil(exp/800)
+    print("S candies needed: " + str(candys))
+    
+    candym = math.ceil(exp/3000)
+    print("M candies needed: " + str(candym))
+    
+    candyl = math.ceil(exp/10000)
+    print("L candies needed: " + str(candyl))
+    
+    candyxl = math.ceil(exp/30000)
+    print("XL candies needed: " + str(candyxl))
+    
+elif pkmn in ListMFast:
+
+    n = int(input("How many levels do you wish to grow your Pokemon from hatch?"))
+    if n >= 2 and n <= 100:
+        exp = pow(n,3)
+    else:
+        print("Pokemon can't level up past level 100!")
+    exp = math.floor(exp)
+    print("Total experience needed: " + str(exp))
+    candyxs = math.ceil(exp/100)
+    print("XS candies needed: " + str(candyxs))
+    
+    candys = math.ceil(exp/800)
+    print("S candies needed: " + str(candys))
+    
+    candym = math.ceil(exp/3000)
+    print("M candies needed: " + str(candym))
+    
+    candyl = math.ceil(exp/10000)
+    print("L candies needed: " + str(candyl))
+    
+    candyxl = math.ceil(exp/30000)
+    print("XL candies needed: " + str(candyxl))
+    
+elif pkmn in ListMSlow:
+
+    n = int(input("How many levels do you wish to grow your Pokemon from hatch?"))
+    if n >= 2 and n <= 100:
+        exp = 1.2*pow(n,3)-15*pow(n,2)+100*n-140
+    else:
+        print("Pokemon can't level up past level 100!")
+    exp = math.floor(exp)
+    print("Total experience needed: " + str(exp))
+    candyxs = math.ceil(exp/100)
+    print("XS candies needed: " + str(candyxs))
+    
+    candys = math.ceil(exp/800)
+    print("S candies needed: " + str(candys))
+    
+    candym = math.ceil(exp/3000)
+    print("M candies needed: " + str(candym))
+    
+    candyl = math.ceil(exp/10000)
+    print("L candies needed: " + str(candyl))
+    
+    candyxl = math.ceil(exp/30000)
+    print("XL candies needed: " + str(candyxl))
+    
+elif pkmn in ListSlow:
+
+    n = int(input("How many levels do you wish to grow your Pokemon from hatch?"))
+    if n >= 2 and n <= 100:
+        exp = 1.25*pow(n,3) 
+    else:
+        print("Pokemon can't level up past level 100!")
+    exp = math.floor(exp)
+    print("Total experience needed: " + str(exp))
+    candyxs = math.ceil(exp/100)
+    print("XS candies needed: " + str(candyxs))
+    
+    candys = math.ceil(exp/800)
+    print("S candies needed: " + str(candys))
+    
+    candym = math.ceil(exp/3000)
+    print("M candies needed: " + str(candym))
+    
+    candyl = math.ceil(exp/10000)
+    print("L candies needed: " + str(candyl))
+    
+    candyxl = math.ceil(exp/30000)
+    print("XL candies needed: " + str(candyxl))
+    
+
+
+elif pkmn in ListFluct:
+
+    n = int(input("How many levels do you wish to grow your Pokemon from hatch?"))
+    if n >= 2 and n <= 15:
+        exp = (1/150)*pow(n,3)*(n+73)
+    elif n > 15 and n <= 36:
+        exp = (1/50)*pow(n,3)*(n+14)
+    elif n > 36 and n <= 100:
+        exp = (1/50)*pow(n,3)*(0.5*n+32)
+    else:
+        print("Pokemon can't level up past level 100!")
+    exp = math.floor(exp)
+    print("Total experience needed: " + str(exp))
+    candyxs = math.ceil(exp/100)
+    print("XS candies needed: " + str(candyxs))
+    
+    candys = math.ceil(exp/800)
+    print("S candies needed: " + str(candys))
+    
+    candym = math.ceil(exp/3000)
+    print("M candies needed: " + str(candym))
+    
+    candyl = math.ceil(exp/10000)
+    print("L candies needed: " + str(candyl))
+    
+    candyxl = math.ceil(exp/30000)
+    print("XL candies needed: " + str(candyxl))
+else:
+    print("This Pokemon isn't found in the Galar Region!")
+    
+    
